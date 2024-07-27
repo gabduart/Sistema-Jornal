@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('variables.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+  background: var(--white);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.8rem;
+  padding: .5rem 0 .5rem 0;
+  box-shadow: 3px 3px 10px var(--gray-400);
+}
+
+header > .logo {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--h3-font-size);
+}
+
+main > .center--div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h2 {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--h4-font-size);
+
+  margin-bottom: .5rem;
+}
+
+main .input--group {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.input--group > label {
+  text-align: start;
+  font-weight: var(--font-weight-semibold);
+}
+
+.input--group > input,
+form > button,
+.authentication--buttons button {
+  width: 448px;
+  height: 44px;
+
+  margin-bottom: .8rem;
+  padding: .8rem;
+}
+
+form > button {
+  padding: 0 !important;
+  margin-top: .3rem;
+  margin-bottom: 0;
+
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  transition: .4s;
+}
+
+form > button:hover {
+  background: var(--gray-900);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  width: 448px;
+  margin: 1rem 0;
+
+  color: var(--gray-600);
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--gray-600);
+}
+
+.separator:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.authentication--buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  margin-bottom: 3.3rem;
+}
+
+.authentication--buttons button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  
+  margin: 0px;
+
+  background: transparent;
+  border: 1px solid var(--black);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.authentication--buttons .google-auth-btn {
+  gap: .8rem;
+  padding-right: 1.8rem;
+}
+
+.btn-icon svg {
+  width: 26px;
+  height: 26px;
+
+  padding-top: .3rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  
+  margin-top: 1rem;
+  padding: 1.25rem;
+  border-top: 1px solid var(--gray-500);
+}
